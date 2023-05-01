@@ -1,0 +1,144 @@
+.footer{
+    position: relative;
+    top: -200px;
+    color: aliceblue;
+    text-align: left;
+}
+
+/* .footer-top{
+    position: absolute;
+    display: block;
+    z-index: -2;
+    top: 20px;
+    height: 150px;
+    width: 100%;
+    background-color: black;
+}
+.footer-bot{
+    position: absolute;
+    display: block;
+    z-index: -2;
+    bottom: 20px;
+    height: 150px;
+    width: 100%;
+    background-color: black;
+} */
+.footer-wrap .row{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footer-wrap .first{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: blue; */
+}
+.footer-wrap .first .alamat{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-wrap .last{
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+    bottom: -100px;
+}
+
+.footer-wrap .first .alamat span svg{
+    margin-right: 8px;
+}
+
+.footer-wrap .first .alamat span{
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.footer-wrap .first .contact{
+    /* background-color: red; */
+    width: 400px;
+}
+.footer-wrap .first .contact input{
+    color: cyan;
+    /* font-size: 20px; */
+    width: 94%;
+    padding:7px 10px;
+    margin-bottom: 10px;
+}
+.footer-wrap .first .contact textarea{
+    color: cyan;
+    padding:11px 8px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    width: 50%;
+}
+.footer-wrap .first .alamat {
+    /* background-color: yellow; */
+}
+
+.footer-wrap .first .contact button{
+    background-color: cyan;
+    padding: 10px 10px;
+    border-radius: 3px;
+    border: none;
+}
+
+.footer-wrap .last svg{
+    margin-right: 10px;
+    cursor: pointer;
+    /* text-decoration: none; */
+}
+.footer-wrap .last span a{
+    position: relative;
+}
+.footer-wrap .last span a::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s linear; 
+    background-color: cyan;
+}
+.footer-wrap .last span a:hover::after{
+    width: 15px;
+}
+.footer-wrap .last .social{
+    margin-bottom: 5px;
+}
+.footer svg{
+    color: cyan;
+}
+
+
+@media (max-width: 450px) {
+    .footer-wrap .row{
+        display: block;
+    }
+
+    .footer-wrap .first{
+        text-align: center;
+    }
+    .footer-wrap .first .alamat{
+        margin-bottom: 57px;
+    }
+    .footer-wrap .first .contact{
+        width: 100%;
+    }
+
+    .footer-wrap .first .contact input{
+        width: 92%;
+    }
+
+    .footer-wrap .first .contact textarea{
+        width:94%;
+        margin-bottom: 10px;
+    }
+
+    .footer-wrap .last{
+        text-align: center;
+    }
+}
+

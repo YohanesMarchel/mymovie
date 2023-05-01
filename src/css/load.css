@@ -1,0 +1,65 @@
+/* LOADING ANIMATION */
+.spinner{
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 45%;
+    margin: 100px auto;
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    font-size: 10px;
+  }
+
+  .spinner > div {
+    background-color: #cce3de;
+    height: 100%;
+    width: 6px;
+    display: inline-block;
+    -webkit-animation:sk-stretchdelay 1.2s infinite ease-in-out;
+    animation:sk-stretchdelay 1.2s infinite ease-in-out;
+  }
+
+  .spinner .rec1{
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
+  }
+  .spinner .rec2{
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+  }
+  .spinner .rec3{
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+  }
+  .spinner .rec4{
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+  }
+  .spinner .rec5{
+    -webkit-animation-delay: -0.7s;
+    animation-delay: -0.7s;
+  }
+  .spinner .rec6{
+    -webkit-animation-delay: -0.6;
+    animation-delay: -0.6;
+  }
+
+  @-webkit-keyframes sk-stretchdelay {
+    0%, 40%, 100% {
+      -webkit-transform: scaleY(0.4);
+    }
+    20%{
+      -webkit-transform: scaleY(1.0);
+    }
+  }
+
+  @keyframes sk-stretchdelay{
+    0%, 40%, 100% {
+      transform: scaleY(0.4);
+      -webkit-transform: scaleY(0.4);
+    }20%{
+      transform: scaleY(1.0);
+      -webkit-transform: scaleY(1.0);
+    }
+  }

@@ -1,0 +1,384 @@
+.App {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/* .App-logo {
+  height: 40vmin;
+  pointer-events: none;
+} */
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+nav{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  transition: 0.5s;
+}
+
+nav.active{
+  background-color: rgba(0, 0, 0, 0.418);
+  height: 60px;
+  backdrop-filter: blur(4px);
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+/* nav h1 {
+  color: white;
+  font-size: 35px;
+  margin-left: 180px;
+}
+
+nav h1 svg{
+  color: cyan;
+} */
+.global-container{
+  position: relative;
+  background:url('./image/hero3.jpg');
+  background-size: cover;
+  background-position:0 0px;
+  height: 100vh;
+  width: 100%;
+  z-index: 4;
+}
+.global-container::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background:linear-gradient(to top,#282c34 ,#282c349d);
+  height: 100vh;
+  width: 100%;
+  z-index: -3;
+}
+.container{
+  margin: auto;
+  /* background-color: aqua; */
+}
+.container .hero-body h1 {
+  color: white;
+  font-size: 60px;
+  margin-top: 100px;
+  position: relative;
+  top: 20px;
+}
+
+.container .hero-body h1 svg{
+  position: relative;
+  top: 5px;
+  color: cyan;
+}
+
+nav a{
+  cursor: pointer;
+  background-color: cyan;
+  padding: 6px 17px;
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
+  border-radius: 5px;
+  margin-right: 180px;
+}
+
+
+.container{
+  height: 100vh;
+}
+
+.container .hero-body{
+  margin-top: 170px;
+}
+.container .hero-body h2{
+  margin-top: -10px;
+}
+.container .hero-body p{
+  font-size: 18px;
+  margin-top: -20px;
+  margin-bottom: 30px;
+}
+.container .hero-body .hero-btn{
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.container .hero-body a{
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  border-radius: 7px;
+}
+
+/* .container .hero-body .explor{
+  background-color: cyan;
+  color: black;
+  padding: 10px 20px;
+} */
+
+/* .container .hero-body .get-started{
+  position: relative;
+  border: 1px solid cyan;
+  padding: 10px 20px;
+  color: cyan;
+  z-index: 4;
+  transition: 0.5s;
+  overflow: hidden;
+  
+}
+
+.container .hero-body .get-started::after{
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: cyan;
+  transform: rotate(-40deg);
+  top: 0;
+  left: -140px;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  border-radius: 7px;
+  transition: 0.5s;
+}
+
+.container .hero-body .get-started:hover.get-started::after{
+  left: 140px;
+  z-index: -1;
+} */
+.container .hero-body .explor{
+  position: relative;
+  border: 2px solid cyan;
+  padding: 10px 20px;
+  color: cyan;
+  z-index: 4;
+  transition: 0.5s;
+  overflow: hidden;
+  
+}
+
+.container .hero-body .explor::after{
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: cyan;
+  transform: rotate(-40deg);
+  top: 0;
+  left: -140px;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  border-radius: 7px;
+  transition: 0.5s;
+}
+
+.container .hero-body .explor:hover.explor::after{
+  left: 140px;
+  z-index: -1;
+}
+
+
+
+.movie-container{
+ margin-top: 25px;
+  width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.title{
+  padding-top: 130px;
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.movie-wrapper{
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  border-radius: 10px;
+  padding: 25px 0 10px 0;
+  width: 320px;
+  background-color: black;
+  color: white;
+  /* font-size: 14px; */
+  overflow: hidden;
+}
+.movie-wrapper .info-hover .movie-title{
+  font-size: 30px;
+  font-weight: bold;
+  color:white;
+  
+}
+.movie-wrapper .info-hover .movie-date{
+  margin-top: 15px;
+  color: white;
+}
+.movie-wrapper .info-hover .movie-rate{
+  margin-top: 10px;
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+}
+.movie-wrapper::after{
+  content: '';
+  position: absolute;
+  height: 600px;
+  width: 350px;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  transition: 0.5s ease-in-out;
+}
+
+.movie-wrapper .info-hover{
+  position: absolute;
+  z-index: 5;
+  left: 50px;
+  top: 100px;
+  right: 50px;
+  bottom: 50px;
+ opacity: 0;
+ transition: 0.5s;
+}
+
+.movie-wrapper:hover img{
+  transform: scale(1.7);
+  filter: blur(1.5px);
+}
+
+.movie-wrapper:hover.movie-wrapper::after{
+  background-color:rgba(12, 12, 12, 0.733);
+  /* background: linear-gradient( to top,black,rgba(0, 255, 255, 0.603)); */
+}
+.movie-wrapper:hover.movie-wrapper .info-hover{
+  opacity: 1;
+}
+.movie-wrapper:hover.movie-wrapper .info-hover .movie-rate{
+  color: cyan;
+}
+
+.movie-wrapper img{
+  transition: 0.5s;
+  width: 230px;
+  height: 300px;
+}
+
+.movie-wrapper .movie-title{
+  font-size: 18px;
+  margin-top: 20px;
+  color: cyan;
+}
+
+.movie-wrapper .movie-date,.movie-wrapper .movie-vote{
+  font-size: 11px;
+}
+
+.introduction{
+  display: flex;
+  width: 60%;
+  gap: 20px;
+  margin: auto;
+  justify-content: center;
+}
+.introduction .movie-search{
+  width: 70%;
+  height: 25px;
+  border-radius: 6px;
+  font-size: 18px;
+  margin-bottom: 32px;
+  padding: 10px;
+  border: none;
+}
+.introduction button{
+  padding:9px 20px;
+  height: 46px;
+  border: none;
+  background-color: cyan;
+  border-radius: 7px;
+  font-size: 25px;
+}
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+
+/* Responsive */
+@media (max-width: 768px){
+  nav h1 {
+
+    margin-left: 0;
+  }
+  
+  
+  nav a{
+    margin-right: 20px;
+  }
+
+  .container .hero-body h1{
+    font-size: 45px;
+  }
+
+  .container .hero-body h2{
+    margin-top: -10px;
+    width: 70%;
+    margin: 0 auto;
+  }
+  .container .hero-body p{
+    margin: 0 auto;
+    font-size: 18px;
+    margin-top: 20px;
+    width: 75%;
+  }
+
+  
+}
+
+
+
+/* .footer{
+  margin-top: 0;
+  
+  position: absolute;
+} */

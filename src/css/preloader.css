@@ -1,0 +1,111 @@
+body{
+  overflow: hidden;
+}
+.preloader {
+  position: fixed;
+  background-color: black;
+  height: 100vh;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 22;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y:visible;
+  box-sizing: border-box;
+}
+
+.preloader .texts-container {
+  display: flex;
+  color: white;
+  justify-content:center;
+  align-items: center;
+  height: 60px;
+  width: 180px;
+  font-weight: 800;
+  overflow: hidden;
+  border-radius: 100px;
+  gap: 15px;
+}
+
+.preloader .texts-container span{
+  background-color: cyan;
+  height: 30px;
+  width: 20px;
+  border-radius: 10px;
+}
+
+/* LOADING ANIMATION */
+.spinner {
+  display: flex;
+  background-color: black;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 100px auto;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  font-size: 10px;
+}
+
+.spinner > div {
+  background-color: #cce3de;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rec1 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+.spinner .rec2 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+.spinner .rec3 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+.spinner .rec4 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+.spinner .rec5 {
+  -webkit-animation-delay: -0.7s;
+  animation-delay: -0.7s;
+}
+.spinner .rec6 {
+  -webkit-animation-delay: -0.6;
+  animation-delay: -0.6;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%,
+  40%,
+  100% {
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    -webkit-transform: scaleY(1);
+  }
+}
+
+@keyframes sk-stretchdelay {
+  0%,
+  40%,
+  100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+  }
+}
