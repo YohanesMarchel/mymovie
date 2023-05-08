@@ -63,7 +63,7 @@ const Ques = () => {
                 }
               >
                 <h2>
-                  Netflix is ​​a streaming service that offers award-winning TV
+                  MyMovie is ​​a streaming service that offers award-winning TV
                   shows, movies, anime, documentaries and more on thousands of
                   Internet-connected devices.
                   <br />
@@ -87,7 +87,7 @@ const Ques = () => {
               }
             >
               <h2>
-                Watch Netflix on your smartphone, tablet, Smart TV, laptop or
+                Watch MyMovie on your smartphone, tablet, Smart TV, laptop or
                 streaming device, all for one fixed monthly price. Prices range
                 from IDR 54,000 to IDR 186,000 per month. No extra fees, no
                 contracts.
@@ -105,7 +105,7 @@ const Ques = () => {
               }
             >
               <h2>
-                Watch anywhere, anytime. Sign in to your Netflix account to
+                Watch anywhere, anytime. Sign in to your MyMovie account to
                 watch live on netflix.com from a personal computer or on any
                 Internet-connected device that supports the Netflix app,
                 including smart TVs, smartphones, tablets, streaming media
@@ -129,7 +129,7 @@ const Ques = () => {
               }
             >
               <h2>
-                Netflix is ​​flexible. No annoying contracts and no commitments.
+                MyMovie is ​​flexible. No annoying contracts and no commitments.
                 You can easily cancel your account online with two clicks. No
                 cancellation fees – start or stop your account anytime.
               </h2>
@@ -146,10 +146,9 @@ const Ques = () => {
               }
             >
               <h2>
-                Netflix memiliki pustaka lengkap yang berisi film panjang, film
-                dokumenter, acara TV, anime, Netflix original pemenang
-                penghargaan, dan lebih banyak lagi. Tonton sepuasnya, kapan pun
-                kamu mau.
+                MyMovie has an extensive library of feature films,
+                documentaries, TV shows, anime, award-winning Netflix originals
+                and more. Watch to your heart's content, whenever you want.
               </h2>
             </div>
           </div>
@@ -164,7 +163,7 @@ const Ques = () => {
               }
             >
               <h2>
-                The Netflix Kids experience is included with your membership so
+                The MyMovie Kids experience is included with your membership so
                 you have parental control while your kids enjoy TV shows and
                 movies for the family at home. A child's profile includes
                 PIN-protected parental controls so you can limit the age rating

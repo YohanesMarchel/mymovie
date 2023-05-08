@@ -57,7 +57,7 @@ const Register = () => {
   };
   return (
     <>
-      <main className="bg-gradient-to-tr from-blue-800 to-blue-500">
+      <main className="">
         <div className="card-detail bg-white">
           <h1 className="text-4xl text-blue-500 ">REGISTER HERE!</h1>
 

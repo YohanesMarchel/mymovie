@@ -30,8 +30,10 @@
 
 .footer-wrap .first{
     display: flex;
-    justify-content: space-around;
+    justify-content: start;
     align-items: center;
+    position: relative;
+    width: 70%;
     /* background-color: blue; */
 }
 .footer-wrap .first .alamat{
@@ -73,9 +75,9 @@
     margin-bottom: 10px;
     width: 50%;
 }
-.footer-wrap .first .alamat {
-    /* background-color: yellow; */
-}
+/* .footer-wrap .first .alamat {
+    background-color: yellow;
+} */
 
 .footer-wrap .first .contact button{
     background-color: cyan;

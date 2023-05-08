@@ -25,7 +25,7 @@ const Footer = () => {
               <br />
               {/* <br /> */}
             </div>
-            <div className="contact">
+            {/* <div className="contact">
               <form action="">
                 <div class="input-group">
                   <i data-feather="user" class="icon"></i>
@@ -42,7 +42,7 @@ const Footer = () => {
 
                 <button class="btn">SEND</button>
               </form>
-            </div>
+            </div> */}
           </div>
           <div className= "row last">
             <div className="social">
