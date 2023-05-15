@@ -9,8 +9,11 @@ import Login from "./Pages/login";
 import Register from "./Pages/register";
 import Dashboard from "./Pages/dashboard";
 import PreLoad from "./components/Preload";
+import DetailMovie from "./components/detailmovie";
+import DetailMovie2 from "./components/detailmovie2";
 
 function App() {
+  
   //session
   const [isLogin, setIsLogin] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -46,6 +49,8 @@ function App() {
       ) : (
         <Router>
           <Routes>
+          {/* <Route path="/detailmovie" element={<DetailMovie />} /> */}
+          <Route path="/detailmovie2" element={<DetailMovie2 />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/" element={<LandingPage />} />

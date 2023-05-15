@@ -1,97 +1,76 @@
 // import { FiSearch } from "react-icons/fi";
 import React, { useState, useEffect } from "react";
+import { getMoviesList, searchMovies } from "../api";
+import Pagination from "./Pagination";
 import ReactDOM from "react-dom";
 import ReactPaginate from "react-paginate";
 import { data } from "autoprefixer";
-import logo from'./../image/img1.jpg'
+import logo from "./../image/img1.jpg";
 
-const Body = (props) => {
+const Body = () => {
+  const [popularMovies, setPopularMovies] = useState([]);
+
+  useEffect(() => {
+    getMoviesList().then((result) => {
+      setPopularMovies(result);
+    });
+  }, []);
+
+  const search = async (q) => {
+    if (q.length > 3) {
+      const query = await searchMovies(q);
+      setPopularMovies(query.results);
+      console.log({ query: query });
+    }
+  };
+
+  const PopularMoviesList = () => {
+    return popularMovies.map((movie, i) => {
+      return (
+        <>
+          <div className="movie-wrapper" key={i}>
+            <img
+              className="movie-img"
+              src={`${process.env.REACT_APP_BASEIMGURL}/${movie.poster_path}`}
+            />
+            <div className="movie-title">{movie.title}</div>
+            <div className="movie-date">{movie.release_date}</div>
+            <div className="movie-main-rate">{movie.vote_average}</div>
+            <div className="info-hover">
+              <div><a href="/detailmovie2" className="movie-title">{movie.title}</a></div>
+              <div className="movie-date">{movie.release_date}</div>
+              <div className="movie-rate">{movie.vote_average}</div>
+            </div>
+        
+          </div>
+
+        </>
+      );
+    });
+  };
+
   return (
     <>
       <p className="title" id="explor">
         Watch your film for fun
       </p>
+
       <div className="introduction">
-        {/* <input
+        <input
           placeholder="Search your favorite film..."
           className="movie-search"
-          onChange={({ target }) => props.search(target.value)}
-        /> */}
-        {/* <button><FiSearch/></button> */}
+          onChange={({ target }) => search(target.value)}
+        />
       </div>
 
-      {/* <div className="movie-container">{props.listMovies()}</div> */}
+      <div className="pagination">
+        <button>Prev</button>
+        <p>1 / 3</p>
+        <button>Next</button>
+      </div>
+
       <div className="movie-container">
-        <div className="movie-wrapper">
-          <img
-            className="movie-img"
-            src={logo}
-          />
-          <div className="movie-title">Spider Man</div>
-          <div className="movie-date">13-05-2021</div>
-          <div className="movie-rate">7.2</div>
-          <div className="info-hover">
-            <div className="movie-title">Spider Man</div>
-            <div className="movie-date">13-05-2021</div>
-            <div className="movie-rate">7.2</div>
-          </div>
-        </div>
-        <div className="movie-wrapper">
-          <img
-            className="movie-img"
-            src={require('./../image/movie2.jpg')}
-          />
-          <div className="movie-title">The Host</div>
-          <div className="movie-date">Jul 27, 2006</div>
-          <div className="movie-rate">6.9</div>
-          <div className="info-hover">
-            <div className="movie-title">The Host</div>
-            <div className="movie-date">Jul 27, 2006</div>
-            <div className="movie-rate">7.0</div>
-          </div>
-        </div>
-        <div className="movie-wrapper">
-          <img
-            className="movie-img"
-            src={require('./../image/movie3.jpg')}
-          />
-          <div className="movie-title">Shazam! Fury of the Gods</div>
-          <div className="movie-date">Mar 15, 2023</div>
-          <div className="movie-rate">7.2</div>
-          <div className="info-hover">
-            <div className="movie-title">Shazam! Fury of the Gods</div>
-            <div className="movie-date">Mar 15, 2023</div>
-            <div className="movie-rate">7.2</div>
-          </div>
-        </div>
-        <div className="movie-wrapper">
-          <img
-            className="movie-img"
-            src={require('./../image/movie3.jpg')}
-          />
-          <div className="movie-title">Shazam! Fury of the Gods</div>
-          <div className="movie-date">Mar 15, 2023</div>
-          <div className="movie-rate">7.2</div>
-          <div className="info-hover">
-            <div className="movie-title">Shazam! Fury of the Gods</div>
-            <div className="movie-date">Mar 15, 2023</div>
-            <div className="movie-rate">7.2</div>
-          </div>
-        </div>
-        <div className="movie-wrapper">
-          <img
-            className="movie-img"
-            src={require('./../image/movie3.jpg')}
-          />
-          <div className="movie-title">Shazam! Fury of the Gods</div>
-          <div className="movie-date">Mar 15, 2023</div>
-          <div className="movie-rate">7.2</div>
-          <div className="info-hover">
-            <div className="movie-title">Shazam! Fury of the Gods</div>
-            <div className="movie-date">Mar 15, 2023</div>
-            <div className="movie-rate">7.2</div>
-          </div>
-        </div>
+        <PopularMoviesList />
       </div>
     </>
   );

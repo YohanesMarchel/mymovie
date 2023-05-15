@@ -1,0 +1,119 @@
+.detailmv-container {
+  position: relative;
+  background: url("../image/hero3.jpg");
+  background-size: cover;
+  background-position: 0 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* top: -40px; */
+  height: 100vh;
+  width: 100%;
+  z-index: 4;
+}
+
+.detailmv-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to top, #282c34, #282c349d);
+    height: 100vh;
+    width: 100%;
+    z-index: -3;
+}
+
+.card-detail-movie{
+    background-color:white;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    margin: 0 auto;
+    width: 50%;
+    height: 60%;
+    top: 0;
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+.card-detail-movie .dec{
+    text-align: start;
+}
+.card-detail-movie .dec svg{
+    color: #ffff13;
+    margin-right: 5px;
+    position: relative;
+    top: 2px;
+}
+.wrap-mv{
+    position: relative;
+    top: 0;
+}
+.card-detail-movie .img-wrap{
+    margin: auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-detail-movie img{
+    width: 250px;
+    height: 350px;
+}
+/* .global-container{
+  position: relative;
+  background:url('./image/hero3.jpg');
+  background-size: cover;
+  background-position:0 0px;
+  height: 100vh;
+  width: 100%;
+  z-index: 4;
+}
+.global-container::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background:linear-gradient(to top,#282c34 ,#282c349d);
+  height: 100vh;
+  width: 100%;
+  z-index: -3;
+} */
+/* 
+.detailmovie img{
+    width: 200px;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.detailmovie .card-detail-movie{
+    padding: 30px 50px;
+}
+
+.detailmovie{
+    height: 100vh;
+    position: relative;
+    padding: 0;
+}
+
+.detailmovie .card-detail-movie h1{
+    margin-bottom: 25px;
+}
+.detailmovie .card-detail-movie h3{
+    margin-bottom: 25px;
+}
+
+.detailmovie .card-detail-movie svg{
+    margin-right: 5px;
+    position: relative;
+    top: 2px;
+} */
+/* Responsive */
+/* @media (max-width: 768px) {
+    .detailmovie {
+        margin: 0 auto;
+        width: auto;
+        height: 100vh;
+        box-sizing: border-box;
+      }
+} */
