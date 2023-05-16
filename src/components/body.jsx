@@ -37,7 +37,7 @@ const Body = () => {
             <div className="movie-date">{movie.release_date}</div>
             <div className="movie-main-rate">{movie.vote_average}</div>
             <div className="info-hover">
-              <div><a href="/detailmovie2" className="movie-title">{movie.title}</a></div>
+              <div><a href="/detailmovie" className="movie-title">{movie.title}</a></div>
               <div className="movie-date">{movie.release_date}</div>
               <div className="movie-rate">{movie.vote_average}</div>
             </div>

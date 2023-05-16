@@ -10,7 +10,6 @@ import Register from "./Pages/register";
 import Dashboard from "./Pages/dashboard";
 import PreLoad from "./components/Preload";
 import DetailMovie from "./components/detailmovie";
-import DetailMovie2 from "./components/detailmovie2";
 
 function App() {
   
@@ -50,7 +49,7 @@ function App() {
         <Router>
           <Routes>
           {/* <Route path="/detailmovie" element={<DetailMovie />} /> */}
-          <Route path="/detailmovie2" element={<DetailMovie2 />} />
+          <Route path="/detailmovie" element={<DetailMovie />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/" element={<LandingPage />} />
