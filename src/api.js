@@ -12,3 +12,10 @@ export const searchMovies = async (q) => {
   // console.log(q);
   return search.data
 };
+export const getMoviesDetail = async () => {
+  const movie = await axios.get(
+    `${process.env.REACT_APP_BASEURL}/movie/popular?api_key=${process.env.REACT_APP_APIKEY}`
+  );
+  // console.log({getMoviesList: movie})
+  return movie.data.results;
+};

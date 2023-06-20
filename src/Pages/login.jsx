@@ -44,9 +44,9 @@ const Login = () => {
   };
   return (
     <>
-      <main className="">
-        <div className="card-detail bg-white">
-          <h1 className="text-4xl text-blue-500 ">LOGIN HERE!</h1>
+      <main className="login-container">
+        <div className="card-detail">
+          <h1 className="text-4xl">LOGIN HERE!</h1>
 
           <form
             action=""
@@ -74,8 +74,8 @@ const Login = () => {
               />
             </div>
             <div className="btn-regis-page flex flex-col">
-              <button className="bg-blue-500 text-white">Login</button>
-              <Link to="/register" className="bg-yellow-500 text-white">
+              <button className="btn-login text-white">Login</button>
+              <Link to="/register" className="btn-regis bg-yellow-500 text-white">
                 Register
               </Link>
               <button

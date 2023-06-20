@@ -27,7 +27,7 @@ const Dashboard = () => {
 
   return (
     <>
-      <main className="dashboard">
+      <main className="dashboard-container">
         <div className="card-detail bg-white">
           <h1 className="text-4xl text-blue-500 ">WELCOME!</h1>
           <img src={user?.photoURL} alt={user?.displayName} className="" />

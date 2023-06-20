@@ -11,8 +11,7 @@ import Dashboard from "./Pages/dashboard";
 import PreLoad from "./components/Preload";
 import DetailMovie from "./components/detailmovie";
 
-function App() {
-  
+function App(props) {
   //session
   const [isLogin, setIsLogin] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -48,8 +47,8 @@ function App() {
       ) : (
         <Router>
           <Routes>
-          {/* <Route path="/detailmovie" element={<DetailMovie />} /> */}
-          <Route path="/detailmovie" element={<DetailMovie />} />
+            {/* <Route path="/detailmovie" element={<DetailMovie />} /> */}
+            <Route path="/detailmovie/:id" element={<DetailMovie />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/" element={<LandingPage />} />

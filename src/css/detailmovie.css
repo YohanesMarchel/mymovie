@@ -24,7 +24,8 @@
 }
 
 .card-detail-movie {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.116);
+  backdrop-filter: blur(4px);
   display: flex;
   gap: 30px;
   margin: 0;
@@ -39,10 +40,11 @@
 }
 .card-detail-movie .dec {
   text-align: start;
+  color: white;
 }
-.card-detail-movie .dec span{
-    font-style: italic;
-    font-size: 13px;
+.card-detail-movie .dec span {
+  font-style: italic;
+  font-size: 13px;
 }
 .card-detail-movie .dec svg {
   color: #ffff13;
@@ -72,13 +74,14 @@
   }
   .card-detail-movie {
     position: relative;
-    background-color: #282c34;
+    background-color: rgba(255, 255, 255, 0.116);
+    backdrop-filter: blur(4px);
     text-align: center;
     flex-direction: column;
     height: 85%;
     width: 60%;
   }
- 
+
   .card-detail-movie .img-wrap {
     position: relative;
     margin: auto;
@@ -92,17 +95,17 @@
     width: 150px;
     height: 220px;
     position: absolute;
-}
-.card-detail-movie .dec{
+  }
+  .card-detail-movie .dec {
     color: white;
   }
 
   .card-detail-movie .dec .mv-title {
-      font-size: 20px;
+    font-size: 20px;
     line-height: 20px;
   }
 
-  .card-detail-movie .dec .mv-slug{
+  .card-detail-movie .dec .mv-slug {
     height: 140px;
     overflow: scroll;
   }

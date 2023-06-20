@@ -6,6 +6,7 @@ import ReactDOM from "react-dom";
 import ReactPaginate from "react-paginate";
 import { data } from "autoprefixer";
 import logo from "./../image/img1.jpg";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   const [popularMovies, setPopularMovies] = useState([]);
@@ -37,13 +38,15 @@ const Body = () => {
             <div className="movie-date">{movie.release_date}</div>
             <div className="movie-main-rate">{movie.vote_average}</div>
             <div className="info-hover">
-              <div><a href="/detailmovie" className="movie-title">{movie.title}</a></div>
+              <div>
+                <Link to={`/detailmovie/${movie.id}`} className="movie-title">
+                  {movie.title}
+                </Link>
+              </div>
               <div className="movie-date">{movie.release_date}</div>
               <div className="movie-rate">{movie.vote_average}</div>
             </div>
-        
           </div>
-
         </>
       );
     });
@@ -63,11 +66,11 @@ const Body = () => {
         />
       </div>
 
-      <div className="pagination">
+      {/* <div className="pagination">
         <button>Prev</button>
         <p>1 / 3</p>
         <button>Next</button>
-      </div>
+      </div> */}
 
       <div className="movie-container">
         <PopularMoviesList />

@@ -7,6 +7,7 @@ import {
   createUserWithEmailAndPassword,
 } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
+import "./../css/dashboard.css";
 
 const Register = () => {
   // Register with google akun
@@ -57,8 +58,8 @@ const Register = () => {
   };
   return (
     <>
-      <main className="">
-        <div className="card-detail bg-white">
+      <main className="register-container">
+        <div className="card-detail">
           <h1 className="text-4xl text-blue-500 ">REGISTER HERE!</h1>
 
           <form

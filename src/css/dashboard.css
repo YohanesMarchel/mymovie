@@ -1,4 +1,35 @@
 /* Dashboard Area */
+.dashboard-container{
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background: url("../image/hero3.jpg");
+  background-size: cover;
+  background-position: 0 0px;
+}
+
+.dashboard-container::after{
+  content: '';
+  position: absolute;
+  display: block;
+  background: linear-gradient(to top, #282c34, #282c349d);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  z-index: 1;
+}
+
+.dashboard-container .card-detail{
+  color: white;
+  background-color: rgba(255, 255, 255, 0.082);
+  backdrop-filter: blur(4px);
+  position: relative;
+  z-index: 2;
+  width: 40%;
+  margin: auto;
+  top: 80px;
+}
+
 main {
   margin: 0 auto;
   padding: 70px 50px 0 50px;
@@ -32,6 +63,7 @@ main {
 
 .card-detail h1 {
   font-weight: 600;
+  color: cyan;
 }
 .card-detail h3 {
   font-weight: 500;
@@ -46,6 +78,9 @@ main {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .dashboard-container .card-detail{
+    width: 80%;
+  }
   main {
     margin: 0 auto;
     padding: 50px 30px 0 30px;
@@ -66,6 +101,43 @@ main {
 }
 
 /* Login Area */
+.login-container{
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background: url("../image/hero3.jpg");
+  background-size: cover;
+  background-position: 0 0px;
+}
+
+.login-container::after{
+  content: '';
+  position: absolute;
+  display: block;
+  background: linear-gradient(to top, #282c34, #282c349d);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  z-index: 1;
+}
+
+.login-container .card-detail{
+  background-color: rgba(255, 255, 255, 0.082);
+  backdrop-filter: blur(4px);
+  position: relative;
+  z-index: 2;
+  width: 40%;
+  margin: auto;
+  top: 80px;
+}
+.login-container .card-detail .btn-login{
+  background-color: cyan;
+  color: #282c34;
+}
+.login-container .card-detail .btn-regis{
+  color: white;
+}
+
 main {
   background-color: white;
 }
@@ -84,6 +156,7 @@ main .btn-regis-page button {
   margin-top: 10px;
   width: 80%;
 }
+
 main .form-login .input-group {
   display: flex;
   flex-direction: column;
@@ -91,7 +164,8 @@ main .form-login .input-group {
 }
 
 main .form-login .input-group label {
-  margin-left: 39px;
+  margin-left: 51px;
+  color: white;
 }
 
 main .form-login input {
@@ -106,6 +180,10 @@ main .form-login {
 }
 /* Responsive */
 @media (max-width: 768px) {
+  .login-container .card-detail{
+    width: 80%;
+    top: 70px;
+  }
   main .btn-regis-page a {
     width: 85%;
   }
@@ -132,5 +210,50 @@ main .form-login {
 
   main .form-login {
     text-align: start;
+  }
+}
+
+
+/* Register  */
+.register-container{
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background: url("../image/hero3.jpg");
+  background-size: cover;
+  background-position: 0 0px;
+}
+
+.register-container::after{
+  content: '';
+  position: absolute;
+  display: block;
+  background: linear-gradient(to top, #282c34, #282c349d);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  z-index: 1;
+}
+
+.register-container .card-detail{
+  background-color: rgba(255, 255, 255, 0.082);
+  backdrop-filter: blur(4px);
+  position: relative;
+  z-index: 2;
+  width: 40%;
+  margin: auto;
+  top: 80px;
+}
+
+.register-container .card-detail .btn-regis{
+  background-color: cyan;
+  color: #282c34;
+}
+
+/* Responsive register */
+@media (max-width: 768px) {
+  .register-container .card-detail{
+    width: 80%;
+    top: 60px;
   }
 }
